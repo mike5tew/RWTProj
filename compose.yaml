@@ -1,0 +1,45 @@
+services:
+  api:
+    build:
+      context: ./RWTapi
+      dockerfile: Dockerfile
+    ports:
+      - "8086:8086"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=rwtchoir
+      - MYSQL_PORT=3306  
+      - MYSQL_USER=root
+      - MYSQL_HOST=db
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - ENCRYPT_KEY=e5d9c4e2a3e0b1a8
+    depends_on:
+      - db
+    networks:
+      - rwt-network
+
+  frontend:
+    build:
+      context: ./rwt
+      dockerfile: rwtReact.dockerfile
+    ports:
+      - "8081:80"  # Change the host port to 8081
+    networks:
+      - rwt-network
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: rwtchoir
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - rwt-network
+
+networks:
+  rwt-network:
+
+volumes:
+  db-data:
