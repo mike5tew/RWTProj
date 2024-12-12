@@ -1,38 +1,47 @@
-version: '3.8'
-
 services:
   api:
+    image: rwtproj-api
     build:
       context: ./RWTapi
       dockerfile: Dockerfile
+    platform: linux/arm64/v8
     ports:
-      - "8086:8086"
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=rwtchoir
-      - MYSQL_PORT=3306
-      - MYSQL_USER=root
-      - MYSQL_HOST=db  # Use the service name 'db' as the hostname
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - ENCRYPT_KEY=e5d9c4e2a3e0b1a8
+      - "8080:8080"
+    env_file:
+      - ./RWTapi/config/.env
+    volumes:
+      - ./RWTapi/images:/app/images
+      - ./RWTapi/music:/app/music
     depends_on:
       - db
+    networks:
+      - rwt-network
 
   frontend:
+    image: rwtproj-frontend
     build:
       context: ./rwt
-      dockerfile: rwtReact.dockerfile  # Ensure this file exists in the rwt directory
+      dockerfile: Dockerfile  # Updated to match your React Dockerfile name
+    platform: linux/arm64/v8
     ports:
-      - "3000:80"  # Map port 3000 on the host to port 80 in the container
+      - "3000:80"
+    networks:
+      - rwt-network
 
   db:
-    image: mysql:5.7
-    platform: linux/amd64
+    image: mysql:8.0
+    platform: linux/arm64/v8  # Changed to match other services
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=rwtchoir
+      - MYSQL_PASSWORD=root
+    ports:
+      - "3306:3306"
     volumes:
       - db-data:/var/lib/mysql
+      - ./rwtchoir.sql:/docker-entrypoint-initdb.d/rwtchoir.sql
+    networks:
+      - rwt-network
 
 networks:
   rwt-network:
