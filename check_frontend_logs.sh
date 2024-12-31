@@ -1,0 +1,2 @@
+bash // filepath: /Users/michaelstewart/Coding/RWTProj/check_frontend_logs.sh 
+!/bin/bash ssh -i /Users/michaelstewart/.ssh/id_rsa root@66.245.195.86 << 'ENDSSH' cd /root/RWTProj docker-compose logs frontend exit ENDSSH 

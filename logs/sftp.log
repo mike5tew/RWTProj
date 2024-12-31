@@ -1,0 +1,80 @@
+Dec 28 00:31:54 10.71.56.0 u116465427 Connection from 10.71.56.0 port 25436 on 82.165.89.241 port 22 rdomain ""
+Dec 28 00:31:54 10.71.56.0 u116465427 Accepted password for u116465427 from 10.71.56.0 port 25436 ssh2
+Dec 28 00:31:54 10.71.56.0 u116465427 Starting session: subsystem 'sftp' for u116465427 from 10.71.56.0 port 25436 id 0
+Dec 28 00:31:54 10.71.56.0 u116465427 session opened for local user u116465427 from [10.71.56.0]
+Dec 28 00:32:31 10.71.56.0 u116465427 open "/logs/.htaccess" flags READ mode 0666
+Dec 28 00:32:31 10.71.56.0 u116465427 open "/logs/info.pl" flags READ mode 0666
+Dec 28 00:32:31 10.71.56.0 u116465427 open "/logs/info.php5" flags READ mode 0666
+Dec 28 00:32:31 10.71.56.0 u116465427 open "/logs/info.py" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/.htaccess" bytes read 269 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|1|269|0|0|0|2f6c6f67732f2e6874616363657373|]
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/info.pl" bytes read 4176 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|1|4176|0|0|0|2f6c6f67732f696e666f2e706c|]
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/info.php5" bytes read 21 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|1|21|0|0|0|2f6c6f67732f696e666f2e70687035|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/traffic.db" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.1.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.4.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/info.py" bytes read 6319 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|1|6319|0|0|0|2f6c6f67732f696e666f2e7079|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.52.3.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/traffic.db" bytes read 24576 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|24576|0|0|0|2f6c6f67732f747261666669632e6462|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.45.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.1.gz" bytes read 7583 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|7583|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e312e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.5.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.4.gz" bytes read 1100 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|1100|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e342e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.6.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.52.3.gz" bytes read 2465 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|2465|0|0|0|2f6c6f67732f6163636573732e6c6f672e35322e332e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.48.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.45.gz" bytes read 40152 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|40152|0|0|0|2f6c6f67732f6163636573732e6c6f672e34352e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.5.gz" bytes read 1067 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|1067|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e352e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.50.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.52.1.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.6.gz" bytes read 1994 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|1994|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e362e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.52.2.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.48.gz" bytes read 14220 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|14220|0|0|0|2f6c6f67732f6163636573732e6c6f672e34382e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.52.5" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.52.1.gz" bytes read 2211 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|2211|0|0|0|2f6c6f67732f6163636573732e6c6f672e35322e312e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.52.2.gz" bytes read 5359 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|5359|0|0|0|2f6c6f67732f6163636573732e6c6f672e35322e322e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.44.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.52.5" bytes read 59956 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|59956|0|0|0|2f6c6f67732f6163636573732e6c6f672e35322e35|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.46.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.50.gz" bytes read 23004 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|23004|0|0|0|2f6c6f67732f6163636573732e6c6f672e35302e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.47.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.2.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.44.gz" bytes read 15673 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|15673|0|0|0|2f6c6f67732f6163636573732e6c6f672e34342e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.3.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.47.gz" bytes read 14526 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|14526|0|0|0|2f6c6f67732f6163636573732e6c6f672e34372e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.51.7.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.2.gz" bytes read 5081 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|5081|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e322e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.52.4.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.46.gz" bytes read 26051 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|26051|0|0|0|2f6c6f67732f6163636573732e6c6f672e34362e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/access.log.49.gz" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.3.gz" bytes read 1327 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|1327|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e332e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/sftp.log" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.51.7.gz" bytes read 951 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|951|0|0|0|2f6c6f67732f6163636573732e6c6f672e35312e372e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/traffic.html/.htaccess" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.52.4.gz" bytes read 904 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|904|0|0|0|2f6c6f67732f6163636573732e6c6f672e35322e342e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/traffic.html/index.html" flags READ mode 0666
+Dec 28 00:32:32 10.71.56.0 u116465427 close "/logs/access.log.49.gz" bytes read 16213 written 0
+Dec 28 00:32:32 10.71.56.0 u116465427 [10.71.56.0|get|0|16213|0|0|0|2f6c6f67732f6163636573732e6c6f672e34392e677a|]
+Dec 28 00:32:32 10.71.56.0 u116465427 open "/logs/traffic.html/05.html" flags READ mode 0666
