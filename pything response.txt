@@ -1,0 +1,13 @@
+Here is a list of Beyoncé's solo studio albums and their release dates:
+
+<scratchpad>
+1. Dangerously in Love (2003)
+2. B'Day (2006)
+3. I Am... Sasha Fierce (2008)
+4. 4 (2011)
+5. Beyoncé (2013)
+6. Lemonade (2016)
+7. Renaissance (2022)
+</scratchpad>
+
+<answer>2022</answer>

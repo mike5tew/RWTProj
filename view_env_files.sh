@@ -10,9 +10,13 @@ cd /root/RWTProj/RWTapi/config
 chmod 600 api.env
 chmod 600 /root/RWTProj/rwt/config/frontend.env
 
-# Deploy services using Docker Compose
+# Pull the latest Docker images
+docker pull your_registry/your_api_image:latest
+docker pull your_registry/your_frontend_image:latest
+
+# Deploy services using Docker Compose with the latest images
 cd /root/RWTProj
-docker-compose up -d
+docker-compose up -d --pull=always
 exit
 ENDSSH
 

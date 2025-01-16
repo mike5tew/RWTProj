@@ -1,0 +1,4 @@
+CREATE USER 'rwtuser'@'%' IDENTIFIED BY '7J#8"pc!2HYN'; 
+GRANT ALL PRIVILEGES ON rwtchoir.* TO 'rwtuser'@'%'; 
+FLUSH PRIVILEGES;
+COMMIT;

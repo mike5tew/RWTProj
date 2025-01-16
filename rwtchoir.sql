@@ -164,3 +164,4 @@ INSERT INTO `users` (`userID`, `user`, `password`, `role`) VALUES
 (1,	'admin',	'admin@123',	'administrator');
 
 -- 2024-11-20 22:34:21
+COMMIT;

@@ -1,11 +1,11 @@
 services:
   api:
-    image: rwtproj-api
-    platform: linux/arm64/v8
+    image: m1ke57ew/espthinking-api:latest
+    pull_policy: always  # Ensure the latest image is always pulled
     ports:
       - "8080:8080"
     env_file:
-      - /root/RWTProj/RWTapi/config/api.env
+      - ./.env
     volumes:
       - /root/RWTProj/images:/app/images
       - /root/RWTProj/music:/app/music
@@ -14,33 +14,60 @@ services:
     networks:
       - rwt-network
 
+    restart: always  # Add restart policy
+
   frontend:
-    image: rwtproj-frontend
-    platform: linux/arm64/v8
+    image: m1ke57ew/espthinking-frontend:latest
+    pull_policy: always  # Ensure the latest image is always pulled
     ports:
-      - "3000:3000"  # Changed from "3000:80" to "3000:3000"
+      - "80:80"  # Changed from 3000:3000 to serve on standard HTTP port
+      - "443:443"  # Add HTTPS port
     env_file:
-      - /root/RWTProj/rwt/config/frontend.env
+      - ./.env # Path to your .env file
+    volumes:
+      - ./ssl:/etc/nginx/ssl:ro  # Make sure this path is correct
+      - ./logs:/var/log/nginx
     networks:
       - rwt-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    links:
+      - api:api  
+    depends_on:
+      - api
+    environment:
+      - REACT_APP_API_URL=/api
+    restart: always  # Add restart policy
 
   db:
     image: mysql:8.0
-    platform: linux/arm64/v8
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=rwtchoir
-      - MYSQL_PASSWORD=root
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_ROOT_USER=${MYSQL_ROOT_USER}
     ports:
       - "3306:3306"
     volumes:
       - db-data:/var/lib/mysql
       - /root/RWTProj/rwtchoir.sql:/docker-entrypoint-initdb.d/rwtchoir.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
     networks:
       - rwt-network
+    restart: always  # Add restart policy
 
 networks:
   rwt-network:
+    name: rwt-network
+    driver: bridge
 
 volumes:
   db-data:
+
+
